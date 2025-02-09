@@ -7,6 +7,10 @@ This application is still on early stages so feel free to reach out if you want 
 Features available:
 * Create a new device;
 * Update existing device;
+* Fetch device by Id;
+* Fetch All devices;
+* Fetch devices by Brand;
+* Fetch devices by State;
 
 You can also find a postman collection to test the endpoints
 
