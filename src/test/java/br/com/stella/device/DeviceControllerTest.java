@@ -10,7 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.util.Assert;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DeviceController.class)
@@ -36,10 +36,10 @@ class DeviceControllerTest {
         deviceDTO.setName("test_name");
         deviceDTO.setBrand("test_brand");
         deviceDTO.setState("Available");
-        mockMvc.perform(post("/devices/newDevice")
+        mockMvc.perform(put("/devices/persist")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(deviceDTO)))
-                .andExpect(status().isCreated());
+                        .andExpect(status().isCreated());
     }
 
     @Test
@@ -49,7 +49,7 @@ class DeviceControllerTest {
         deviceDTO.setBrand("test_brand");
         deviceDTO.setState("test_state");
         try {
-            mockMvc.perform(post("/devices/newDevice")
+            mockMvc.perform(put("/devices/persist")
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(objectMapper.writeValueAsString(deviceDTO)));
         } catch (Exception e){
