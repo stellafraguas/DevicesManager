@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="29e46d33-24d2-4195-b39e-501f3ad4f6c0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sl2YqHv46qEuN5xvE5OVU7JX7x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.DeviceControllerTest.executor": "Run",
+    "JUnit.DeviceControllerTest.newDeviceCreatedTest.executor": "Debug",
+    "JUnit.ProjetoAluraApplicationTests.executor": "Run",
+    "Maven.DevicesManager [clean].executor": "Run",
+    "Maven.DevicesManager [compile].executor": "Run",
+    "Maven.DevicesManager [install].executor": "Run",
+    "Maven.DevicesManager [test].executor": "Run",
+    "Maven.ProjetoAlura [clean].executor": "Run",
+    "Maven.ProjetoAlura [compile].executor": "Run",
+    "Maven.ProjetoAlura [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.DevicesManagerApplication (1).executor": "Run",
+    "Spring Boot.DevicesManagerApplication.executor": "Run",
+    "Spring Boot.ProjetoAluraApplication.executor": "Run",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Projects/DevicesManager",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\55119\Documents\projeto-alura (1)\projeto-alura-master\src\test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.stella.user" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DevicesManagerApplication (1)">
+    <configuration name="DeviceControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevicesManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.stella.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.stella.user" />
+      <option name="MAIN_CLASS_NAME" value="br.com.stella.user.DeviceControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeviceControllerTest.newDeviceCreatedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevicesManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.stella.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.stella.user" />
+      <option name="MAIN_CLASS_NAME" value="br.com.stella.user.DeviceControllerTest" />
+      <option name="METHOD_NAME" value="newDeviceCreatedTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevicesManagerApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DevicesManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.alura.ProjetoAlura.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.alura.ProjetoAlura" />
+      <option name="MAIN_CLASS_NAME" value="br.com.alura.ProjetoAlura.DevicesManagerApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="projeto-alura-master" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="projeto-alura-master" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DevicesManagerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="DevicesManager" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.stella.DevicesManagerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.stella.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevicesManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="DevicesManager" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.alura.ProjetoAlura.DevicesManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.DevicesManagerApplication (1)" />
+        <item itemvalue="JUnit.DeviceControllerTest" />
+        <item itemvalue="JUnit.DeviceControllerTest.newDeviceCreatedTest" />
+        <item itemvalue="JUnit.DevicesManagerApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="29e46d33-24d2-4195-b39e-501f3ad4f6c0" name="Changes" comment="" />
+      <created>1739015892117</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739015892117</updated>
+      <workItem from="1739015894357" duration="9758000" />
+      <workItem from="1739050542177" duration="20574000" />
+      <workItem from="1739102411194" duration="2254000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="deviceRepository.findAll()" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
