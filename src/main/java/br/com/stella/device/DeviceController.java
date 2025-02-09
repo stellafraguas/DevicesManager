@@ -4,13 +4,16 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
 
 @RestController
 @RequestMapping("/devices")
@@ -43,5 +46,19 @@ public class DeviceController {
         device = newDevice.toModel();
         deviceRepository.save(device);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+    @GetMapping("/fetchById")
+    @ResponseBody
+    public ResponseEntity<?> fetchDevice(@RequestParam @Valid Long id) throws IllegalArgumentException {
+        Device device = deviceRepository.findById(id).orElse(null);
+        if (device == null) {
+            //no device found for given id
+            String msg = String.format("Device with id %s not found",id);
+            logger.info(msg);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(msg);
+        }
+        //device found for id
+        return ResponseEntity.status(HttpStatus.OK).body(device);
     }
 }
