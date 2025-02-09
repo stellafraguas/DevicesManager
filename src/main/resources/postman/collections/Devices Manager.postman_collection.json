@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "332d40a1-917b-48c2-b48a-31471867ee51",
+		"name": "Devices Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20037583"
+	},
+	"item": [
+		{
+			"name": "persist create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test_name2\",\r\n    \"brand\": \"test_brand2\",\r\n    \"state\": \"In Use\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/devices/persist",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"persist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
