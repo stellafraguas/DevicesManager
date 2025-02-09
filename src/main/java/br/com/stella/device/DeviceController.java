@@ -4,8 +4,10 @@ import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
 
 import java.util.List;
 
@@ -110,4 +113,29 @@ public class DeviceController {
             return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(e.getMessage());
         }
     }
+
+    @DeleteMapping("/delete")
+    @ResponseBody
+    public ResponseEntity<?> delete(@RequestParam @Valid Long id) throws IllegalArgumentException {
+        String msg;
+        HttpStatusCode httpStatusCode;
+        Device device = deviceRepository.findById(id).orElse(null);
+        if (device == null) {
+            //no record found with given id
+            msg = String.format("Device with id %s not found", id);
+            httpStatusCode = HttpStatus.NOT_FOUND;
+        } else if (device.getState().equals(State.IN_USE)) {
+            //records with In Use state cannot be deleted
+            msg = String.format("Cannot delete device with id %s due to In Use state. ", id);
+            httpStatusCode = HttpStatus.NOT_ACCEPTABLE;
+        } else {
+            //delete device with given id
+            deviceRepository.delete(device);
+            msg = String.format("Successfully deleted device with id %s. ", id);
+            httpStatusCode = HttpStatus.OK;
+        }
+        logger.info(msg);
+        return ResponseEntity.status(httpStatusCode).body(msg);
+    }
+
 }

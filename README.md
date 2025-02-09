@@ -11,6 +11,7 @@ Features available:
 * Fetch All devices;
 * Fetch devices by Brand;
 * Fetch devices by State;
+* Delete device by Id;
 
 You can also find a postman collection to test the endpoints
 
@@ -30,3 +31,9 @@ You can also find a postman collection to test the endpoints
  java -jar DevicesManager-X.X.X-SNAPSHOT.jar
 ```
 5. Wait for application to finish startup, then you should be good to go!
+
+### Pending points
+- [ ] Include in-memory DB for unit tests
+- [ ] Include relevant tests for endpoints - without in-memory DB, unit tests repository is not working
+- [ ] Include Docker compose to start DB and Application
+- [ ] API Documentation (Swagger)
