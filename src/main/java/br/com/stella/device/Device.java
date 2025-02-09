@@ -40,4 +40,8 @@ public class Device {
         this(name, brand, state);
         this.id = id;
     }
+
+    public void setState(String state){
+        this.state = State.valueOfLabel(state);     //ensure sting is a valid state
+    }
 }
