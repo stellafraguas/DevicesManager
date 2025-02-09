@@ -133,19 +133,55 @@
 					]
 				},
 				"url": {
-					"raw": "localhost:8080/devices/fetchById?id=2",
+					"raw": "localhost:8080/devices/fetchAll",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"devices",
-						"fetchById"
+						"fetchAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchByBrand",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/devices/fetchByBrand?brand=test_brand",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"fetchByBrand"
 					],
 					"query": [
 						{
-							"key": "id",
-							"value": "2"
+							"key": "brand",
+							"value": "test_brand"
 						}
 					]
 				}

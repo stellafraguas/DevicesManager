@@ -77,4 +77,17 @@ public class DeviceController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No devices found");
     }
 
+    @GetMapping("/fetchByBrand")
+    @ResponseBody
+    public ResponseEntity<?> fetchByBrand(@RequestParam @Valid String brand) throws IllegalArgumentException {
+        List<Device> devices = deviceRepository.findByBrand(brand);
+        if (!devices.isEmpty()) {
+            //devices found for given brand
+            logger.info("Fetched {} devices with brand {}", devices.size(), brand);
+            return ResponseEntity.status(HttpStatus.OK).body(devices);
+        }
+        //no devices found for given brand
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No devices found for brand " + brand);
+    }
+
 }
