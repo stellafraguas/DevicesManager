@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/devices")
@@ -61,4 +63,18 @@ public class DeviceController {
         //device found for id
         return ResponseEntity.status(HttpStatus.OK).body(device);
     }
+
+    @GetMapping("/fetchAll")
+    @ResponseBody
+    public ResponseEntity<?> fetchAllDevices() throws IllegalArgumentException {
+        List<Device> devices = deviceRepository.findAll();
+        if (!devices.isEmpty()) {
+            //devices found
+            logger.info("Fetched all {} devices", devices.size());
+            return ResponseEntity.status(HttpStatus.OK).body(devices);
+        }
+        //no devices found
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No devices found");
+    }
+
 }
