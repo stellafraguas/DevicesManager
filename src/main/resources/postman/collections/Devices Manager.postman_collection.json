@@ -187,6 +187,48 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "fetchByState",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/devices/fetchByState?state=Available",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"fetchByState"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "Available"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
