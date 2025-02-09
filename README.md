@@ -32,8 +32,11 @@ You can also find a postman collection to test the endpoints
 ```
 5. Wait for application to finish startup, then you should be good to go!
 
+# API Documentation
+* [Swagger](http://localhost:8080/swagger-ui/index.html#/)
+
 ### Pending points
 - [ ] Include in-memory DB for unit tests
 - [ ] Include relevant tests for endpoints - without in-memory DB, unit tests repository is not working
 - [ ] Include Docker compose to start DB and Application
-- [ ] API Documentation (Swagger)
+- [X] API Documentation (Swagger)
