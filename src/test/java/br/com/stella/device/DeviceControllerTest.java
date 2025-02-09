@@ -1,7 +1,6 @@
 package br.com.stella.device;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -25,11 +24,6 @@ class DeviceControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @BeforeEach
-    void setUp() {
-        deviceRepository.deleteAll(); // Clean database before each test
-    }
-
     @Test
     public void newDeviceCreatedTest() throws Exception {
         DeviceDTO deviceDTO = new DeviceDTO();
@@ -39,7 +33,7 @@ class DeviceControllerTest {
         mockMvc.perform(put("/devices/persist")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(deviceDTO)))
-                        .andExpect(status().isCreated());
+                        .andExpect(status().isNoContent());
     }
 
     @Test
@@ -55,5 +49,35 @@ class DeviceControllerTest {
         } catch (Exception e){
             Assert.isInstanceOf(IllegalArgumentException.class, e.getCause());
         }
+    }
+
+    @Test
+    public void updateDeviceTest() throws Exception {
+        Device device = new Device("test_name", "test_brand", "Available");
+        deviceRepository.save(device);
+        DeviceDTO deviceDTO = new DeviceDTO();
+        deviceDTO.setId(1L);
+        deviceDTO.setName("test_name2");
+        deviceDTO.setBrand("test_brand2");
+        deviceDTO.setState("Inactive");
+        mockMvc.perform(put("/devices/persist")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(deviceDTO)))
+                .andExpect(status().isNoContent());
+    }
+
+    @Test
+    public void updateDeviceInUseTest() throws Exception {
+        Device device = new Device("test_name", "test_brand", "In Use");
+        deviceRepository.save(device);
+        DeviceDTO deviceDTO = new DeviceDTO();
+        deviceDTO.setId(1L);
+        deviceDTO.setName("test_name2");
+        deviceDTO.setBrand("test_brand2");
+        deviceDTO.setState("Available");
+        mockMvc.perform(put("/devices/persist")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(deviceDTO)))
+                .andExpect(status().isNoContent());
     }
 }

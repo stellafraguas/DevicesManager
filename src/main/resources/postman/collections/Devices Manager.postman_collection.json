@@ -36,6 +36,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "persist update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"name\": \"test_name2\",\r\n    \"brand\": \"test_brand2\",\r\n    \"state\": \"In Use\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/devices/persist",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"devices",
+						"persist"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
