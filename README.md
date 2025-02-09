@@ -13,7 +13,7 @@ Features available:
 * Fetch devices by State;
 * Delete device by Id;
 
-You can also find a postman collection to test the endpoints
+You can also find a postman collection to test the endpoints at src/main/resources/postman/collections
 
 # Pre-requisites:
 * JDK 21
