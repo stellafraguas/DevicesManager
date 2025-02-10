@@ -13,7 +13,7 @@ Features available:
 * Fetch devices by State;
 * Delete device by Id;
 
-You can also find a postman collection to test the endpoints
+You can also find a postman collection to test the endpoints at src/main/resources/postman/collections
 
 # Pre-requisites:
 * JDK 21
@@ -34,9 +34,3 @@ You can also find a postman collection to test the endpoints
 
 # API Documentation
 * [Swagger](http://localhost:8080/swagger-ui/index.html#/)
-
-### Pending points
-- [ ] Include in-memory DB for unit tests
-- [ ] Include relevant tests for endpoints - without in-memory DB, unit tests repository is not working
-- [ ] Include Docker compose to start DB and Application
-- [X] API Documentation (Swagger)
